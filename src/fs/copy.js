@@ -1,8 +1,8 @@
-import { cp } from 'fs'
+import fs from 'node:fs'
 
 const copy = async () => {
 
-    cp('src/fs/files/', 'src/fs/files-copy/', { recursive: true }, (error) => {
+    fs.cp('src/fs/files/', 'src/fs/files-copy/', { recursive: true }, (error) => {
         if (error) {
             console.log("FS operation failed");
         }

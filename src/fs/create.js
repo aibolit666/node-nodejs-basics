@@ -1,8 +1,8 @@
-import { writeFile } from 'fs';
+import fs from 'node:fs';
 
 const create = async () => {
 
-    writeFile('src/fs/files/fresh.txt', 'I am fresh and young', (error) => {
+    fs.writeFile('src/fs/files/fresh.txt', 'I am fresh and young', (error) => {
         if (error) {
             console.log("FS operation failed");
         }
